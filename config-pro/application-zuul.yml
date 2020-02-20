@@ -1,0 +1,19 @@
+#自定义路由映射：面向服务路由配置：zuul和eureka结合：zuul注册到eureka中，eureka会为每一个服务配置一个默认的路由规则，
+  #默认规则的path就是使用serviceId作为请求前缀，
+zuul:
+  routes:
+    order-server: /apigateway/order/**
+    product-server: /apigateway/product/**
+    product-ser: /apigateway/producter/**
+    service-security:
+      path: /apigateway/security/**
+    #统一入口为上面的配置，其他入口忽略
+  ignored-patterns: /*-service/**
+  #忽略整个服务，对外提供接口
+  ignored-services: order-service
+  sensitive-headers:  #全局过滤：过滤HTTP请求头的一些敏感信息Cookie,set-Cookie,Authorization
+
+
+
+
+
