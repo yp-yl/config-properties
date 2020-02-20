@@ -4,7 +4,7 @@ zuul:
   routes:
     order-server: /apigateway/order/**
     product-server: /apigateway/product/**
-    product-ser: /apigateway/producter/**
+    product-ser: /apigateway/cter/**
     service-security:
       path: /apigateway/security/**
     #统一入口为上面的配置，其他入口忽略
